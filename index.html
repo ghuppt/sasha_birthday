@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>для киси ❤️</title>
+<style>
+*{box-sizing:border-box}body{margin:0;min-height:100vh;font-family:Arial,sans-serif;color:#fff;background:radial-gradient(circle at top,#ffd9e8,#ffb6d0 45%,#8f4268);overflow-x:hidden}.wrap{max-width:760px;margin:auto;padding:28px 18px 70px;text-align:center}.card{background:#5a123b55;backdrop-filter:blur(12px);border:1px solid #ffffff44;border-radius:30px;padding:28px 20px;margin:18px 0;box-shadow:0 15px 50px #37001e44}h1{font-size:clamp(34px,9vw,68px);margin:12px 0}h2{font-size:28px}p{font-size:18px;line-height:1.65}.sub{opacity:.9}button{border:0;border-radius:999px;padding:15px 24px;margin:8px;background:#fff;color:#a12b60;font-size:17px;font-weight:700;cursor:pointer;box-shadow:0 7px 20px #0003}.hidden{display:none}.reveal{animation:reveal 1.5s ease forwards}.letter{min-height:110px;white-space:pre-wrap;text-align:left;background:#ffffff1a;padding:20px;border-radius:20px}@keyframes reveal{from{opacity:0;transform:translateY(18px);filter:blur(8px)}to{opacity:1;transform:none;filter:blur(0)}}.photo{width:min(100%,420px);border-radius:25px;box-shadow:0 12px 35px #0005}.heart{position:fixed;bottom:-30px;pointer-events:none;animation:float 5s linear forwards;font-size:24px}@keyframes float{0%{transform:translateY(0) scale(.8);opacity:0}15%{opacity:1}100%{transform:translateY(-110vh) rotate(25deg);opacity:0}}footer{opacity:.8;margin-top:35px}
+</style></head>
+<body><div class="wrap">
+<div class="card reveal"><div style="font-size:50px">💘💘</div><h1>с днём рождения кисяя</h1><p class="sub">етат маленький сайт для моей любимой девачки</p><button onclick="openBlock('one')">💗 жамкай сюда</button></div>
+<div id="one" class="card hidden"><h2>первое паслание 🥹❤️❤️</h2><div class="letter" id="letter1"></div><button onclick="openBlock('two')">💌 ещё сюда</button></div>
+<div id="two" class="card hidden"><h2>а теперь ещё одно ❤️</h2><p>я не знаю как нормально объяснить словами насколько ты мне дорога. просто я очень сильно тебя люблю и хочу чтобы ты улыбалась как можно чаще.</p><button onclick="openBlock('three')">😔😔 последнее</button></div>
+<div id="three" class="card hidden"><h2>самое главное 💞</h2><div class="letter" id="letter2"></div><button onclick="hearts()">❤️ нажми если любишь</button></div>
+<div class="card"><h2>внизу кися</h2><p class="sub">а ета кто у нас принцесска такая❤️❤️❤️❤️❤️🥹<b></b></p><img class="photo" src="sasha.jpg" alt="Саша" onerror="this.style.display='none'"></div><footer>сделано с любовью ❤️</footer></div>
+<script>
+const text1=`сашуля моя любимая я тебя безумно люблю ❤️❤️❤️❤️\nспасиба тебе за все моменты которые у нас были💘\nя хочу чтобы ты всегда знала одну вещь, ты для меня безумно важнфй человек очень важный человек.`;
+const text2=`с днём рождения тебя моя любимая сашуля калинина и ваше еще у тебя фамилия прикольная но моя бы на тебе лучше смотрелась ❤️❤️❤️❤️\n\nя хочу чтобы этот день был для тебя самым счастливым.\nчтобы ты много улыбалась смеялась и чувствовала себя самай любимой❤️❤️❤️❤️\n\nЯ БЕЗУМНО СИЛЬНА ПРИСИЛЬНА ТЕБЯ ЛЮБЛЮ КИСЯЯ❤️❤️❤️\nс днём раждения, моя сашуляяяяя ❤️❤️❤️❤️`;
+function typeText(el,text){el.textContent='';let i=0;const t=setInterval(()=>{el.textContent+=text[i++];if(i>=text.length)clearInterval(t)},28)}
+function openBlock(id){const e=document.getElementById(id);e.classList.remove('hidden');e.classList.add('reveal');e.scrollIntoView({behavior:'smooth',block:'center'});if(id==='one')typeText(letter1,text1);if(id==='three')typeText(letter2,text2)}
+function hearts(){for(let i=0;i<25;i++)setTimeout(()=>{const h=document.createElement('div');h.className='heart';h.textContent=['❤️','💗','💕','💖','💘'][Math.floor(Math.random()*5)];h.style.left=Math.random()*100+'vw';h.style.animationDuration=3+Math.random()*3+'s';document.body.appendChild(h);setTimeout(()=>h.remove(),6500)},i*100)}
+</script></body></html>
